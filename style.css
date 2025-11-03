@@ -4,19 +4,27 @@
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
     font-size: 0.85rem;
-    color: rgb(5, 0, 0);
+    color:rgb(255, 255, 255);
 }
 
 .container-pai {
     width: 200px;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+     background-image: url('icons/fundoo.jpg');
+    background-size: cover;       /* Faz a imagem cobrir toda a área */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
     border: 2px solid #33333310;
     gap: 5px;
+    border-radius: 12px;
+}
+
+.logo{
+    border-radius: 15px;
 }
 
 .container-button {
@@ -29,21 +37,31 @@
 }
 
 .btn {
-    background-color: #D9D9D9;
-    border-radius: 2px;
+    background-color: #FFD700;
+    border-radius: 12px;
     cursor: pointer;
     padding: 5px;
     color: black;
     text-align: center;
     font-size: 10px;
+    border: none;
+}
+
+.btn:hover{
+    background-color: #fbff00;
+    box-shadow: 0 0 0 1.5px #fbff00;
 }
 
 
 .input-text{
-    background-color: #F3F3F3;
-    border-radius: 1px;
-    border: 1px solid #333333c7;
+    background-color: #00000000;
+    border-radius: 12px;
     margin-top: -8px;
+    color: white;
+}
+
+.input-text::placeholder{
+    color: #ffffff99;
 }
 
 /* Desafio */
@@ -69,17 +87,23 @@
 }
 
 .link{
-    color: blue;
+    color: #fbff00;
+}
+
+.link:hover{
+    color: #ffea00;
+    box-shadow: 0 0 0 0.5px #fbff00;
 }
 
 .result{
     width: 157.5px;
     height: 68px;
-    background-color: #F3F3F3;
-    border: 0.5px solid #333333af;
+    background-color: #00000023;
+    color: white;
     padding: 20px;
     justify-content: start;
     padding: 5px;
+    border-radius: 12px;
 }
 
 #btnMaiuscula,

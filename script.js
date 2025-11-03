@@ -10,11 +10,15 @@ window.document.addEventListener("DOMContentLoaded", function(){
         document.querySelector("#result").innerHTML = inputText.toLowerCase()
     })
 
-    window.document.getElementById("btnPrimeiraLetraMaiuscula").addEventListener("click", function(le) {
-    let inputText = document.querySelector("#input-text").value;
-    let resultado = inputText.charAt(0).toUpperCase() + inputText.slice(1).toLowerCase();
-    document.querySelector("#result").innerHTML = resultado;
-    })
+    window.document.getElementById("btnPrimeiraLetraMaiuscula").addEventListener("click", function() {
+        let inputText = document.querySelector("#input-text").value;
+        let resultado = inputText.replace(/(^\s*\w|[.!?]\s*\w)/g, function(c) {
+        return c.toUpperCase();
+    });
+
+  document.querySelector("#result").innerHTML = resultado;
+});
+
 
     window.document.querySelector("#btnlimpar").addEventListener("click", function() {
         document.querySelector("#input-text").value = '';
